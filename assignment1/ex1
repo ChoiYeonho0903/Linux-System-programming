@@ -1,0 +1,29 @@
+#!/bin/bash
+#example1
+echo "두 정수를 입력해주세요: "
+read a b
+let i=$a+1
+let j=2
+let sum=0
+while :
+do
+		let j=2
+		while(($i%$j!=0))
+		do
+				let j++
+				if(($i==$j))
+				then
+						let sum=$sum+$i
+						break
+				fi
+		done
+
+		if(($i==$b-1))
+		then
+				break
+		else
+				let i++
+		fi
+done
+
+echo $sum

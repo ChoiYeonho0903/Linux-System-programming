@@ -1,0 +1,14 @@
+#!/bin/bash
+#example2
+echo "월과 일을 입력하세요: "
+read x y
+let i=0
+month=(31 28 31 30 31 30 31 31 30 31 30 31)
+day=("THU" "FRI" "SAT" "SUN" "MON" "TUE" "WED")
+while(($i < $x-1))
+do 
+		let y=$y+${month[$i]}
+		let i++
+done
+
+echo ${day[$y%7]}
